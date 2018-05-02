@@ -20,6 +20,7 @@ module.exports = {
   entry: { main: "./src/app.js" },
   output: {
     path: path.join(__dirname, "dist"),
+    publicPath: '/',
     filename: "bundle.js"
   },
   optimization: {
