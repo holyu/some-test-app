@@ -6,10 +6,10 @@
   "author": "holyu",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
     "build:sm": "cross-env NODE_ENV=source_map webpack",
-    "build:dev": "webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack",
     "serve": "live-server ./dist/",
     "serve:gzip": "http-server ./dist/ -g",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
