@@ -108,7 +108,7 @@ module.exports = {
       /moment[\/\\]locale$/,
       /pl/
     ),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new webpack.DefinePlugin({
       'process.env.FIREBASE_apiKey': JSON.stringify(process.env.FIREBASE_apiKey),
       'process.env.FIREBASE_authDomain': JSON.stringify(process.env.FIREBASE_authDomain),
