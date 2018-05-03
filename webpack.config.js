@@ -11,6 +11,12 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 
+if (process.env.NODE_ENV == "test") {
+  require('dotenv').config({ path: '.env.test' })
+} else if (process.env.NODE_ENV == "development") {
+  require('dotenv').config({ path: '.env.development' })
+}
+
 const productionMode =
   process.env.NODE_ENV == "production" || process.env.NODE_ENV == "source_map";
 const sourceMap = process.env.NODE_ENV == "source_map";
@@ -102,7 +108,17 @@ module.exports = {
       /moment[\/\\]locale$/,
       /pl/
     ),
-    // new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.FIREBASE_apiKey': JSON.stringify(process.env.FIREBASE_apiKey),
+      'process.env.FIREBASE_authDomain': JSON.stringify(process.env.FIREBASE_authDomain),
+      'process.env.FIREBASE_databaseURL': JSON.stringify(process.env.FIREBASE_databaseURL),
+      'process.env.FIREBASE_projectId': JSON.stringify(process.env.FIREBASE_projectId),
+      'process.env.FIREBASE_storageBucket': JSON.stringify(process.env.FIREBASE_storageBucket),
+      'process.env.FIREBASE_messagingSenderId': JSON.stringify(process.env.FIREBASE_messagingSenderId)      
+    }
+
+    )
   ],
   
   devtool: productionMode

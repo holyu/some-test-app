@@ -2,6 +2,8 @@ node_modules/
 dist/
 public/
 .vscode/
+.env.test
+.env.development
 yarn-error.log
 package-lock.json
 yarn.lock
