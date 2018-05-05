@@ -1,11 +1,12 @@
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import {
-  startAddExpense,
   addExpense,
+  startAddExpense,
   editExpense,
+  startEditExpense,
   removeExpense,
-  StartRemoveExpense,
+  startRemoveExpense,
   setExpenses,
   startSetExpenses
 } from "../../actions/expenses";
@@ -37,7 +38,7 @@ test("should remove the expense from firebase", done => {
   const store = createMockStore({});
   const id = expenses[0].id;
   store
-    .dispatch(StartRemoveExpense({ id }))
+    .dispatch(startRemoveExpense({ id }))
     .then(() => {
       const actions = store.getActions();
       expect(actions[0]).toEqual({
@@ -52,25 +53,35 @@ test("should remove the expense from firebase", done => {
     });
 });
 
-test("should fetch the expense from firebase", done => {
-  const store = createMockStore({});
-  store.dispatch(startSetExpenses()).then(() => {
-    const actions = store.getActions();
-    expect(actions[0]).toEqual({
-      type: "SET_EXPENSES",
-      expenses
-    });
-    done();
+test("should setup edit expense action object", () => {
+  const action = editExpense(expenses[0].id, expenses[1]);
+  expect(action).toEqual({
+    type: "EDIT_EXPENSE",
+    id: expenses[0].id,
+    updates: expenses[1]
   });
 });
 
-test("should setup edit expense action object", () => {
-  const action = editExpense("123abc", { smt: "smt1" });
-  expect(action).toEqual({
-    type: "EDIT_EXPENSE",
-    id: "123abc",
-    updates: { smt: "smt1" }
-  });
+test("should edit expense from firebase", done => {
+  const store = createMockStore({});
+  const { id, description, amount, note, createdAt } = expenses[0];
+  const updates = { description: "Update" };
+  const updated = { description: updates.description, amount, note, createdAt };
+  store
+    .dispatch(startEditExpense(id, updates))
+    .then(() => {
+      const actions = store.getActions();
+      expect(actions[0]).toEqual({
+        type: "EDIT_EXPENSE",
+        id,
+        updates
+      });
+      return databese.ref(`expenses/${id}`).once("value");
+    })
+    .then(snapshot => {
+      expect(snapshot.val()).toEqual(updated);
+      done();
+    });
 });
 
 test("should setup add expense action object with provided values", () => {

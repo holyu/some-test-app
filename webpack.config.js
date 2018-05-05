@@ -12,9 +12,9 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 
 if (process.env.NODE_ENV == "test") {
-  require('dotenv').config({ path: '.env.test' })
+  require("dotenv").config({ path: ".env.test" });
 } else if (process.env.NODE_ENV == "development") {
-  require('dotenv').config({ path: '.env.development' })
+  require("dotenv").config({ path: ".env.development" });
 }
 
 const productionMode =
@@ -26,7 +26,7 @@ module.exports = {
   entry: { main: "./src/app.js" },
   output: {
     path: path.join(__dirname, "dist"),
-    publicPath: '/',
+    publicPath: "/",
     filename: "bundle.js"
   },
   optimization: {
@@ -104,23 +104,31 @@ module.exports = {
       algorithm: "gzip",
       test: productionMode ? /\.js$|\.css$|\.html$/ : /$a/,
       minRatio: 0.8
-    }),new webpack.ContextReplacementPlugin(
-      /moment[\/\\]locale$/,
-      /pl/
-    ),
+    }),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pl/),
     // new BundleAnalyzerPlugin(),
     new webpack.DefinePlugin({
-      'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
-      'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
-      'process.env.FIREBASE_DATABASE_URL': JSON.stringify(process.env.FIREBASE_DATABASE_URL),
-      'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
-      'process.env.FIREBASE_STOREGE_BUCKET': JSON.stringify(process.env.FIREBASE_STOREGE_BUCKET),
-      'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID)      
-    }
-
-    )
+      "process.env.FIREBASE_API_KEY": JSON.stringify(
+        process.env.FIREBASE_API_KEY
+      ),
+      "process.env.FIREBASE_AUTH_DOMAIN": JSON.stringify(
+        process.env.FIREBASE_AUTH_DOMAIN
+      ),
+      "process.env.FIREBASE_DATABASE_URL": JSON.stringify(
+        process.env.FIREBASE_DATABASE_URL
+      ),
+      "process.env.FIREBASE_PROJECT_ID": JSON.stringify(
+        process.env.FIREBASE_PROJECT_ID
+      ),
+      "process.env.FIREBASE_STOREGE_BUCKET": JSON.stringify(
+        process.env.FIREBASE_STOREGE_BUCKET
+      ),
+      "process.env.FIREBASE_MESSAGING_SENDER_ID": JSON.stringify(
+        process.env.FIREBASE_MESSAGING_SENDER_ID
+      )
+    })
   ],
-  
+
   devtool: productionMode
     ? sourceMap
       ? "source-map"

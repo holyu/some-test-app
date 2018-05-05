@@ -1,6 +1,5 @@
 import expenses from "../fixtures/expenses";
-import selectExpensesTotal from "../../selectors/expenses-total"
-
+import selectExpensesTotal from "../../selectors/expenses-total";
 
 test("should return 0 if no expenses", () => {
   expect(selectExpensesTotal([])).toBe(0);
