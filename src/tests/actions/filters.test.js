@@ -5,21 +5,20 @@ import {
   setStartDate,
   setEndDate
 } from "../../actions/filters";
-import moment from "moment";
 
 test("setStartDate", () => {
-  const action = setStartDate(moment(5000));
+  const action = setStartDate(new Date(5000));
   expect(action).toEqual({
     type: "SET_START_DATE",
-    startDate: moment(5000)
+    startDate: new Date(5000)
   });
 });
 
 test("setEndDate", () => {
-  const action = setEndDate(moment(1000));
+  const action = setEndDate(new Date(1000));
   expect(action).toEqual({
     type: "SET_END_DATE",
-    endDate: moment(1000)
+    endDate: new Date(1000)
   });
 });
 

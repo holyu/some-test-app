@@ -1,6 +1,5 @@
 import React from "react";
-import moment from "moment";
-import { SingleDatePicker } from "react-dates";
+import DatePicker from "react-date-picker/dist/entry.nostyle";
 
 export default class ExpenseForm extends React.Component {
   constructor(props) {
@@ -9,8 +8,7 @@ export default class ExpenseForm extends React.Component {
       description: props.expense ? props.expense.description : "",
       note: props.expense ? props.expense.note : "",
       amount: props.expense ? (props.expense.amount / 100).toString() : "",
-      createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
-      calendarFocused: false,
+      createdAt: props.expense ? new Date(props.expense.createdAt) : new Date(),
       error: undefined
     };
   }
@@ -29,9 +27,6 @@ export default class ExpenseForm extends React.Component {
       this.setState(() => ({ createdAt }));
     }
   };
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({ calendarFocused: focused }));
-  };
   onNoteChange = e => {
     const note = e.target.value;
     this.setState(() => ({ note }));
@@ -47,7 +42,7 @@ export default class ExpenseForm extends React.Component {
       this.props.onSubmit({
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
-        createdAt: this.state.createdAt.valueOf(),
+        createdAt: this.state.createdAt.getTime(),
         note: this.state.note
       });
     }
@@ -70,13 +65,10 @@ export default class ExpenseForm extends React.Component {
             value={this.state.amount}
             onChange={this.onAmountChange}
           />
-          <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
+          <DatePicker
+            onChange={this.onDateChange}
+            value={this.state.createdAt}
+            returnValue="start"
           />
           <textarea
             placeholder="Add a note for your expense (optional)"

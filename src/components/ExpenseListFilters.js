@@ -7,19 +7,14 @@ import {
   setStartDate,
   setEndDate
 } from "../actions/filters";
-import moment from "moment";
-import { DateRangePicker } from "react-dates";
+import DatePicker from "react-date-picker/dist/entry.nostyle";
 
 export class ExpenseListFilters extends React.Component {
-  state = {
-    calendarFocused: null
-  };
-  onDatesChange = ({ startDate, endDate }) => {
+  onStartDatesChange = startDate => {
     this.props.setStartDate(startDate);
-    this.props.setEndDate(endDate);
   };
-  onFocusChange = calendarFocused => {
-    this.setState(() => ({ calendarFocused }));
+  onEndDatesChange = endDate => {
+    this.props.setEndDate(endDate);
   };
   onTextChange = e => this.props.setTextFilter(e.target.value);
   onSortChange = e => {
@@ -41,17 +36,15 @@ export class ExpenseListFilters extends React.Component {
           <option value="date">Date</option>
           <option value="amount">Amount</option>
         </select>
-        <DateRangePicker
-          startDate={this.props.filters.startDate}
-          startDateId="id1"
-          endDate={this.props.filters.endDate}
-          endDateId="id2"
-          onDatesChange={this.onDatesChange}
-          focusedInput={this.state.calendarFocused}
-          onFocusChange={this.onFocusChange}
-          showClearDates={true}
-          numberOfMonths={1}
-          isOutsideRange={() => false}
+        <DatePicker
+          onChange={this.onStartDatesChange}
+          value={this.props.filters.startDate}
+          returnValue="start"
+        />
+        <DatePicker
+          onChange={this.onEndDatesChange}
+          value={this.props.filters.endDate}
+          returnValue="end"
         />
       </div>
     );

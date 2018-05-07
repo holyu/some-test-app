@@ -2,7 +2,10 @@ import React from "react";
 import { shallow } from "enzyme";
 import ExpenseForm from "../../components/ExpenseForm";
 import expenses from "../fixtures/expenses";
-import moment from "moment";
+
+const DATE_TO_USE = new Date(0);
+const _Date = Date;
+global.Date = jest.fn(() => DATE_TO_USE);
 
 test("should render ExpenseForm correctly", () => {
   const wrapper = shallow(<ExpenseForm />);
@@ -75,17 +78,8 @@ test("should not set amount if invalid imput", () => {
 });
 
 test("should set new date on date change", () => {
-  const now = moment();
+  const now = new Date();
   const wrapper = shallow(<ExpenseForm />);
-  wrapper.find("withStyles(SingleDatePicker)").prop("onDateChange")(now);
+  wrapper.find("DatePicker").prop("onChange")(now);
   expect(wrapper.state("createdAt")).toEqual(now);
-});
-
-test("should set calendar focus on change", () => {
-  const focused = true;
-  const wrapper = shallow(<ExpenseForm />);
-  wrapper.find("withStyles(SingleDatePicker)").prop("onFocusChange")({
-    focused
-  });
-  expect(wrapper.state("calendarFocused")).toBe(focused);
 });

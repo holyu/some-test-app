@@ -8,5 +8,12 @@ exports[`should render AddExpensePage correctly 1`] = `
   <ExpenseForm
     onSubmit={[Function]}
   />
+  <div
+    style={
+      Object {
+        "minHeight": "500px",
+      }
+    }
+  />
 </div>
 `;

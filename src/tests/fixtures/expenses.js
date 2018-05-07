@@ -1,5 +1,3 @@
-import moment from "moment";
-
 export default [
   {
     id: "1",
@@ -13,17 +11,13 @@ export default [
     description: "Rent",
     amount: 109500,
     note: "Rent for April",
-    createdAt: moment(0)
-      .subtract(4, "days")
-      .valueOf()
+    createdAt: -345600000
   },
   {
     id: "3",
     description: "Credit Card",
     amount: 4500,
     note: "",
-    createdAt: moment(0)
-      .add(4, "days")
-      .valueOf()
+    createdAt: 345600000
   }
 ];

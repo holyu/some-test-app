@@ -1,13 +1,13 @@
 import filtersReducer from "../../reducers/filters";
-import moment from "moment";
 
 test("should setup def filter val", () => {
   const state = filtersReducer(undefined, { type: "@@INIT" });
+  const date = new Date();
   expect(state).toEqual({
     text: "",
     sortBy: "date",
-    startDate: moment().startOf("month"),
-    endDate: moment().endOf("month")
+    startDate: new Date(date.getFullYear(), date.getMonth(), 1),
+    endDate: new Date(date.getFullYear(), date.getMonth() + 1, 1, 0, 0, 0, -1)
   });
 });
 
@@ -35,14 +35,14 @@ test("should set text filter", () => {
 });
 
 test("should set startDate filter", () => {
-  const startDate = moment();
+  const startDate = new Date();
   const action = { type: "SET_START_DATE", startDate };
   const state = filtersReducer(undefined, action);
   expect(state.startDate).toBe(startDate);
 });
 
 test("should set endDate filter", () => {
-  const endDate = moment();
+  const endDate = new Date();
   const action = { type: "SET_END_DATE", endDate };
   const state = filtersReducer(undefined, action);
   expect(state.endDate).toBe(endDate);

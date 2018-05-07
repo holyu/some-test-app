@@ -19,5 +19,12 @@ exports[`should render EditExpensePage correctly 1`] = `
   >
     Remove
   </button>
+  <div
+    style={
+      Object {
+        "minHeight": "500px",
+      }
+    }
+  />
 </div>
 `;

@@ -22,99 +22,135 @@ exports[`should render ExpenseListFilters correctly 1`] = `
       Amount
     </option>
   </select>
-  <withStyles(DateRangePicker)
-    anchorDirection="left"
-    appendToBody={false}
-    block={false}
-    calendarInfoPosition="bottom"
-    customArrowIcon={null}
-    customCloseIcon={null}
-    customInputIcon={null}
-    daySize={39}
-    disableScroll={false}
-    disabled={false}
-    displayFormat={[Function]}
-    enableOutsideDays={false}
-    endDate={null}
-    endDateId="id2"
-    endDatePlaceholderText="End Date"
-    firstDayOfWeek={null}
-    focusedInput={null}
-    hideKeyboardShortcutsPanel={false}
-    horizontalMargin={0}
-    initialVisibleMonth={null}
-    inputIconPosition="before"
-    isDayBlocked={[Function]}
-    isDayHighlighted={[Function]}
-    isOutsideRange={[Function]}
-    isRTL={false}
-    keepFocusOnInput={false}
-    keepOpenOnDateSelect={false}
-    minimumNights={1}
-    monthFormat="MMMM YYYY"
-    navNext={null}
-    navPrev={null}
-    noBorder={false}
-    numberOfMonths={1}
-    onClose={[Function]}
-    onDatesChange={[Function]}
-    onFocusChange={[Function]}
-    onNextMonthClick={[Function]}
-    onPrevMonthClick={[Function]}
-    openDirection="down"
-    orientation="horizontal"
-    phrases={
-      Object {
-        "calendarLabel": "Calendar",
-        "chooseAvailableEndDate": [Function],
-        "chooseAvailableStartDate": [Function],
-        "clearDates": "Clear Dates",
-        "closeDatePicker": "Close",
-        "dateIsSelected": [Function],
-        "dateIsUnavailable": [Function],
-        "enterKey": "Enter key",
-        "escape": "Escape key",
-        "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
-        "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
-        "homeEnd": "Home and end keys",
-        "jumpToNextMonth": "Move forward to switch to the next month.",
-        "jumpToPrevMonth": "Move backward to switch to the previous month.",
-        "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
-  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-        "keyboardShortcuts": "Keyboard Shortcuts",
-        "leftArrowRightArrow": "Right and left arrow keys",
-        "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
-        "moveFocusByOneMonth": "Switch months.",
-        "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
-        "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
-        "openThisPanel": "Open this panel.",
-        "pageUpPageDown": "page up and page down keys",
-        "questionMark": "Question mark",
-        "returnFocusToInput": "Return to the date input field.",
-        "selectFocusedDate": "Select the date in focus.",
-        "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
-        "upArrowDownArrow": "up and down arrow keys",
-      }
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
     }
-    readOnly={false}
-    regular={false}
-    renderCalendarInfo={null}
-    renderDayContents={null}
-    renderMonth={null}
-    reopenPickerOnClearDates={false}
-    required={false}
-    screenReaderInputMessage=""
-    showClearDates={true}
-    showDefaultInputIcon={false}
-    small={false}
-    startDate={null}
-    startDateId="id1"
-    startDatePlaceholderText="Start Date"
-    verticalHeight={null}
-    verticalSpacing={22}
-    weekDayFormat="dd"
-    withFullScreenPortal={false}
-    withPortal={false}
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="start"
+    value={null}
+  />
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
+    }
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="end"
+    value={null}
   />
 </div>
 `;
@@ -141,99 +177,135 @@ exports[`should render ExpenseListFilters with alt date correctly 1`] = `
       Amount
     </option>
   </select>
-  <withStyles(DateRangePicker)
-    anchorDirection="left"
-    appendToBody={false}
-    block={false}
-    calendarInfoPosition="bottom"
-    customArrowIcon={null}
-    customCloseIcon={null}
-    customInputIcon={null}
-    daySize={39}
-    disableScroll={false}
-    disabled={false}
-    displayFormat={[Function]}
-    enableOutsideDays={false}
-    endDate={"1970-01-04T00:00:00.000Z"}
-    endDateId="id2"
-    endDatePlaceholderText="End Date"
-    firstDayOfWeek={null}
-    focusedInput={null}
-    hideKeyboardShortcutsPanel={false}
-    horizontalMargin={0}
-    initialVisibleMonth={null}
-    inputIconPosition="before"
-    isDayBlocked={[Function]}
-    isDayHighlighted={[Function]}
-    isOutsideRange={[Function]}
-    isRTL={false}
-    keepFocusOnInput={false}
-    keepOpenOnDateSelect={false}
-    minimumNights={1}
-    monthFormat="MMMM YYYY"
-    navNext={null}
-    navPrev={null}
-    noBorder={false}
-    numberOfMonths={1}
-    onClose={[Function]}
-    onDatesChange={[Function]}
-    onFocusChange={[Function]}
-    onNextMonthClick={[Function]}
-    onPrevMonthClick={[Function]}
-    openDirection="down"
-    orientation="horizontal"
-    phrases={
-      Object {
-        "calendarLabel": "Calendar",
-        "chooseAvailableEndDate": [Function],
-        "chooseAvailableStartDate": [Function],
-        "clearDates": "Clear Dates",
-        "closeDatePicker": "Close",
-        "dateIsSelected": [Function],
-        "dateIsUnavailable": [Function],
-        "enterKey": "Enter key",
-        "escape": "Escape key",
-        "focusStartDate": "Interact with the calendar and add the check-in date for your trip.",
-        "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
-        "homeEnd": "Home and end keys",
-        "jumpToNextMonth": "Move forward to switch to the next month.",
-        "jumpToPrevMonth": "Move backward to switch to the previous month.",
-        "keyboardNavigationInstructions": "Press the down arrow key to interact with the calendar and
-  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-        "keyboardShortcuts": "Keyboard Shortcuts",
-        "leftArrowRightArrow": "Right and left arrow keys",
-        "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
-        "moveFocusByOneMonth": "Switch months.",
-        "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
-        "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
-        "openThisPanel": "Open this panel.",
-        "pageUpPageDown": "page up and page down keys",
-        "questionMark": "Question mark",
-        "returnFocusToInput": "Return to the date input field.",
-        "selectFocusedDate": "Select the date in focus.",
-        "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
-        "upArrowDownArrow": "up and down arrow keys",
-      }
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
     }
-    readOnly={false}
-    regular={false}
-    renderCalendarInfo={null}
-    renderDayContents={null}
-    renderMonth={null}
-    reopenPickerOnClearDates={false}
-    required={false}
-    screenReaderInputMessage=""
-    showClearDates={true}
-    showDefaultInputIcon={false}
-    small={false}
-    startDate={"1970-01-01T00:00:00.000Z"}
-    startDateId="id1"
-    startDatePlaceholderText="Start Date"
-    verticalHeight={null}
-    verticalSpacing={22}
-    weekDayFormat="dd"
-    withFullScreenPortal={false}
-    withPortal={false}
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="start"
+    value={1970-01-01T00:00:00.000Z}
+  />
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
+    }
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
+        >
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="end"
+    value={1970-01-01T00:01:10.000Z}
   />
 </div>
 `;
