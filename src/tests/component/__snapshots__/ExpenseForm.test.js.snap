@@ -1,384 +1,414 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseForm correctly 1`] = `
-<div>
-  <form
-    onSubmit={[Function]}
-  >
-    <input
-      autoFocus={true}
-      onChange={[Function]}
-      placeholder="Description"
-      type="text"
-      value=""
-    />
-    <input
-      onChange={[Function]}
-      placeholder="Amount"
-      type="text"
-      value=""
-    />
-    <DatePicker
-      calendarIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Description"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Amount"
+    type="text"
+    value=""
+  />
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <rect
-              fill="none"
-              height="15"
-              width="15"
-              x="2"
-              y="2"
-            />
-            <line
-              x1="6"
-              x2="6"
-              y1="0"
-              y2="4"
-            />
-            <line
-              x1="13"
-              x2="13"
-              y1="0"
-              y2="4"
-            />
-          </g>
-        </svg>
-      }
-      clearIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
+    }
+    className="datepicker no-clear"
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <line
-              x1="4"
-              x2="15"
-              y1="4"
-              y2="15"
-            />
-            <line
-              x1="15"
-              x2="4"
-              y1="4"
-              y2="15"
-            />
-          </g>
-        </svg>
-      }
-      isOpen={null}
-      onChange={[Function]}
-      returnValue="start"
-      value={1970-01-01T00:00:00.000Z}
-    />
-    <textarea
-      onChange={[Function]}
-      placeholder="Add a note for your expense (optional)"
-      value=""
-    />
-    <button>
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="start"
+    value={1970-01-01T00:00:00.000Z}
+  />
+  <textarea
+    className="textarea"
+    onChange={[Function]}
+    placeholder="Add a note for your expense (optional)"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
       Add Expense
     </button>
-  </form>
-</div>
+  </div>
+</form>
 `;
 
 exports[`should render ExpenseForm with expense data 1`] = `
-<div>
-  <form
-    onSubmit={[Function]}
-  >
-    <input
-      autoFocus={true}
-      onChange={[Function]}
-      placeholder="Description"
-      type="text"
-      value="Rent"
-    />
-    <input
-      onChange={[Function]}
-      placeholder="Amount"
-      type="text"
-      value="1095"
-    />
-    <DatePicker
-      calendarIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Description"
+    type="text"
+    value="Rent"
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Amount"
+    type="text"
+    value="1095"
+  />
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <rect
-              fill="none"
-              height="15"
-              width="15"
-              x="2"
-              y="2"
-            />
-            <line
-              x1="6"
-              x2="6"
-              y1="0"
-              y2="4"
-            />
-            <line
-              x1="13"
-              x2="13"
-              y1="0"
-              y2="4"
-            />
-          </g>
-        </svg>
-      }
-      clearIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
+    }
+    className="datepicker no-clear"
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <line
-              x1="4"
-              x2="15"
-              y1="4"
-              y2="15"
-            />
-            <line
-              x1="15"
-              x2="4"
-              y1="4"
-              y2="15"
-            />
-          </g>
-        </svg>
-      }
-      isOpen={null}
-      onChange={[Function]}
-      returnValue="start"
-      value={1970-01-01T00:00:00.000Z}
-    />
-    <textarea
-      onChange={[Function]}
-      placeholder="Add a note for your expense (optional)"
-      value="Rent for April"
-    />
-    <button>
-      Edit Expense
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="start"
+    value={1970-01-01T00:00:00.000Z}
+  />
+  <textarea
+    className="textarea"
+    onChange={[Function]}
+    placeholder="Add a note for your expense (optional)"
+    value="Rent for April"
+  />
+  <div>
+    <button
+      className="button"
+    >
+      Save Expense
     </button>
-  </form>
-</div>
+  </div>
+</form>
 `;
 
 exports[`should render error for invalid form submission 1`] = `
-<div>
-  <form
-    onSubmit={[Function]}
-  >
-    <input
-      autoFocus={true}
-      onChange={[Function]}
-      placeholder="Description"
-      type="text"
-      value=""
-    />
-    <input
-      onChange={[Function]}
-      placeholder="Amount"
-      type="text"
-      value=""
-    />
-    <DatePicker
-      calendarIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Description"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Amount"
+    type="text"
+    value=""
+  />
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <rect
-              fill="none"
-              height="15"
-              width="15"
-              x="2"
-              y="2"
-            />
-            <line
-              x1="6"
-              x2="6"
-              y1="0"
-              y2="4"
-            />
-            <line
-              x1="13"
-              x2="13"
-              y1="0"
-              y2="4"
-            />
-          </g>
-        </svg>
-      }
-      clearIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
+    }
+    className="datepicker no-clear"
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <line
-              x1="4"
-              x2="15"
-              y1="4"
-              y2="15"
-            />
-            <line
-              x1="15"
-              x2="4"
-              y1="4"
-              y2="15"
-            />
-          </g>
-        </svg>
-      }
-      isOpen={null}
-      onChange={[Function]}
-      returnValue="start"
-      value={1970-01-01T00:00:00.000Z}
-    />
-    <textarea
-      onChange={[Function]}
-      placeholder="Add a note for your expense (optional)"
-      value=""
-    />
-    <button>
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="start"
+    value={1970-01-01T00:00:00.000Z}
+  />
+  <textarea
+    className="textarea"
+    onChange={[Function]}
+    placeholder="Add a note for your expense (optional)"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
       Add Expense
     </button>
-  </form>
-</div>
+  </div>
+</form>
 `;
 
 exports[`should render error for invalid form submission 2`] = `
-<div>
-  <p>
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <p
+    className="form__error"
+  >
     Please provide description and amount.
   </p>
-  <form
-    onSubmit={[Function]}
-  >
-    <input
-      autoFocus={true}
-      onChange={[Function]}
-      placeholder="Description"
-      type="text"
-      value=""
-    />
-    <input
-      onChange={[Function]}
-      placeholder="Amount"
-      type="text"
-      value=""
-    />
-    <DatePicker
-      calendarIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Description"
+    type="text"
+    value=""
+  />
+  <input
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Amount"
+    type="text"
+    value=""
+  />
+  <DatePicker
+    calendarIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <rect
-              fill="none"
-              height="15"
-              width="15"
-              x="2"
-              y="2"
-            />
-            <line
-              x1="6"
-              x2="6"
-              y1="0"
-              y2="4"
-            />
-            <line
-              x1="13"
-              x2="13"
-              y1="0"
-              y2="4"
-            />
-          </g>
-        </svg>
-      }
-      clearIcon={
-        <svg
-          height="19"
-          viewBox="0 0 19 19"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
+          <rect
+            fill="none"
+            height="15"
+            width="15"
+            x="2"
+            y="2"
+          />
+          <line
+            x1="6"
+            x2="6"
+            y1="0"
+            y2="4"
+          />
+          <line
+            x1="13"
+            x2="13"
+            y1="0"
+            y2="4"
+          />
+        </g>
+      </svg>
+    }
+    className="datepicker no-clear"
+    clearIcon={
+      <svg
+        height="19"
+        viewBox="0 0 19 19"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="black"
+          strokeWidth="2"
         >
-          <g
-            stroke="black"
-            strokeWidth="2"
-          >
-            <line
-              x1="4"
-              x2="15"
-              y1="4"
-              y2="15"
-            />
-            <line
-              x1="15"
-              x2="4"
-              y1="4"
-              y2="15"
-            />
-          </g>
-        </svg>
-      }
-      isOpen={null}
-      onChange={[Function]}
-      returnValue="start"
-      value={1970-01-01T00:00:00.000Z}
-    />
-    <textarea
-      onChange={[Function]}
-      placeholder="Add a note for your expense (optional)"
-      value=""
-    />
-    <button>
+          <line
+            x1="4"
+            x2="15"
+            y1="4"
+            y2="15"
+          />
+          <line
+            x1="15"
+            x2="4"
+            y1="4"
+            y2="15"
+          />
+        </g>
+      </svg>
+    }
+    isOpen={null}
+    onChange={[Function]}
+    returnValue="start"
+    value={1970-01-01T00:00:00.000Z}
+  />
+  <textarea
+    className="textarea"
+    onChange={[Function]}
+    placeholder="Add a note for your expense (optional)"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+    >
       Add Expense
     </button>
-  </form>
-</div>
+  </div>
+</form>
 `;

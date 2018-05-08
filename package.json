@@ -13,7 +13,8 @@
     "serve": "live-server ./dist/",
     "serve:gzip": "http-server ./dist/ -g",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
-    "tests": "cross-env NODE_ENV=test jest --config=jest.config.json --watchAll",
+    "tests":
+      "cross-env NODE_ENV=test jest --config=jest.config.json --watchAll",
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build"
   },
@@ -32,6 +33,7 @@
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
     "express-static-gzip": "^0.3.2",
+    "file-loader": "^1.1.11",
     "firebase": "^4.13.1",
     "history": "^4.7.2",
     "html-webpack-plugin": "^3.2.0",

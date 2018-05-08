@@ -23,7 +23,7 @@ const sourceMap = process.env.NODE_ENV == "source_map";
 
 module.exports = {
   mode: productionMode ? "production" : "development",
-  entry: { main: "./src/app.js" },
+  entry: ["babel-polyfill", "./src/app.js"],
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/",
@@ -69,6 +69,10 @@ module.exports = {
             options: { sourceMap: true }
           }
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"]
       }
     ]
   },
@@ -77,6 +81,7 @@ module.exports = {
       inject: "body",
       template: "./src/index.html",
       filename: "index.html",
+      favicon: "./src/images/favicon.png",
       minify: productionMode
         ? {
             collapseWhitespace: true,

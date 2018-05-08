@@ -26,26 +26,44 @@ export class ExpenseListFilters extends React.Component {
   };
   render() {
     return (
-      <div>
-        <input
-          type="text"
-          value={this.props.filters.text}
-          onChange={this.onTextChange}
-        />
-        <select value={this.props.filters.sortBy} onChange={this.onSortChange}>
-          <option value="date">Date</option>
-          <option value="amount">Amount</option>
-        </select>
-        <DatePicker
-          onChange={this.onStartDatesChange}
-          value={this.props.filters.startDate}
-          returnValue="start"
-        />
-        <DatePicker
-          onChange={this.onEndDatesChange}
-          value={this.props.filters.endDate}
-          returnValue="end"
-        />
+      <div className="content-container">
+        <div className="input-group">
+          <div className="input-group__item">
+            <input
+              type="text"
+              className="text-input"
+              placeholder="Search expenses"
+              value={this.props.filters.text}
+              onChange={this.onTextChange}
+            />
+          </div>
+          <div className="input-group__item">
+            <DatePicker
+              className="datepicker"
+              onChange={this.onStartDatesChange}
+              value={this.props.filters.startDate}
+              returnValue="start"
+            />
+          </div>
+          <div className="input-group__item">
+            <DatePicker
+              className="datepicker"
+              onChange={this.onEndDatesChange}
+              value={this.props.filters.endDate}
+              returnValue="end"
+            />
+          </div>
+          <div className="input-group__item">
+            <select
+              className="select"
+              value={this.props.filters.sortBy}
+              onChange={this.onSortChange}
+            >
+              <option value="date">Date</option>
+              <option value="amount">Amount</option>
+            </select>
+          </div>
+        </div>
       </div>
     );
   }

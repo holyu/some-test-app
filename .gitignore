@@ -2,6 +2,7 @@ node_modules/
 dist/
 public/
 .vscode/
+src/playgrrund/
 .env.test
 .env.development
 yarn-error.log
