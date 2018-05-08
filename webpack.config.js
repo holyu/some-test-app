@@ -110,7 +110,6 @@ module.exports = {
       test: productionMode ? /\.js$|\.css$|\.html$/ : /$a/,
       minRatio: 0.8
     }),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /pl/),
     // new BundleAnalyzerPlugin(),
     new webpack.DefinePlugin({
       "process.env.FIREBASE_API_KEY": JSON.stringify(
@@ -133,7 +132,6 @@ module.exports = {
       )
     })
   ],
-
   devtool: productionMode
     ? sourceMap
       ? "source-map"

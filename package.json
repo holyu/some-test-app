@@ -7,16 +7,15 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack",
-    "build:sm": "cross-env NODE_ENV=source_map webpack",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.fake.js",
+    "build:sm": "cross-env NODE_ENV=source_map webpack --config webpack.prod.fake.js",
     "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:heroku": "webpack",
     "serve": "live-server ./dist/",
     "serve:gzip": "http-server ./dist/ -g",
-    "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
-    "tests":
-      "cross-env NODE_ENV=test jest --config=jest.config.json --watchAll",
+    "tests": "cross-env NODE_ENV=test jest --config=jest.config.json --watchAll",
     "start": "node server/server.js",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build:heroku"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -40,13 +39,11 @@
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.8.3",
     "normalize.css": "^8.0.0",
-    "numeral": "^2.0.6",
     "optimize-css-assets-webpack-plugin": "^4.0.1",
     "postcss-loader": "^2.1.4",
     "react": "^16.3.2",
     "react-date-picker": "^6.10.1",
     "react-dom": "^16.3.2",
-    "react-modal": "^3.4.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
@@ -67,6 +64,7 @@
     "redux-mock-store": "^1.5.1",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^2.0.15",
-    "webpack-dev-server": "^3.1.3"
+    "webpack-dev-server": "^3.1.3",
+    "webpack-merge": "^4.1.2"
   }
 }
